@@ -1,1 +1,1 @@
-PROJECT STATUS -> work in progress.
+PROJECT STATUS -> work in progress
