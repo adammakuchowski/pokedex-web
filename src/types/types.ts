@@ -12,6 +12,6 @@ export interface Pokemon {
 
 export interface ThemeColor {
   theme: boolean,
-  navbarColor: string,
-  backgroundColor: string
+  backgroundColor: string,
+  pokedexBackgroundColor: string
 }

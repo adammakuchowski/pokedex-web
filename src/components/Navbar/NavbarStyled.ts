@@ -7,6 +7,7 @@ export const NavbarContainer = styled.div`
 
   display: grid;
   grid-template-columns: repeat(3, minmax(auto, 1fr));
+  z-index: 1002;
 `
 
 export const LogoContainer = styled.div`

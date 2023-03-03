@@ -16,6 +16,8 @@ import {LoadingSpinner} from '../../UI/LoadingSpinner/LoadingSpinner'
 
 export const PokemonCard = ({
   pokemonData,
+  openPokemonModal,
+  setPokemonModalData,
 }: PokemonCardProps): JSX.Element | null => {
   const [pokemonDetails, setPokemonDetails] = useState<PokemonDetails>()
   const [loadingData, setLoadingData] = useState<boolean>(true)
@@ -50,6 +52,11 @@ export const PokemonCard = ({
     }
   }, [pokemonDetails])
 
+  const openModal = () => {
+    openPokemonModal(true)
+    setPokemonModalData(pokemonDetails)
+  }
+
 
   if (!pokemonDetails || loadingData) {
       return (
@@ -66,7 +73,7 @@ export const PokemonCard = ({
         <PokemonIndex>{pokemonDetails.order}#</PokemonIndex>
       </PokemonCardHeader>
       <PokemonCardBody>
-        <PokemonSprite src={pokemonDetails.sprites.front_default} />
+        <PokemonSprite src={pokemonDetails.sprites.front_default} onClick={openModal} />
         <PokemonInfo>
           {pokemonDetails.types.map(type => (
             <div>{type.type.name}</div>
