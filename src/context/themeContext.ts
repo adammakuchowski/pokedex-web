@@ -3,8 +3,8 @@ import React from 'react'
 export type ThemeContextType = {
   themeColor: {
     theme: boolean,
-    navbarColor: string,
-    backgroundColor: string
+    backgroundColor: string,
+    pokedexBackgroundColor: string
   };
   switchThemeColor: () => void;
 }
@@ -12,8 +12,8 @@ export type ThemeContextType = {
 const ThemeContext = React.createContext<ThemeContextType>({
   themeColor: {
     theme: true,
-    navbarColor: '#FF5858',
-    backgroundColor: '#fbfbfb'
+    backgroundColor: '#FF5858',
+    pokedexBackgroundColor: '#fbfbfb'
   },
   switchThemeColor: () => {}
 })

@@ -2,17 +2,22 @@ import {useContext} from 'react'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 import ThemeContext from '../../context/themeContext'
 import {ArrowContainer, PaginationContainer} from './PaginationStyled'
-import {PaginationProps} from './types'
+
+interface PaginationProps {
+  gotoNextPage: Function | null,
+  gotoPreviousPage: Function | null,
+}
+
 
 export const Pagination = ({
   gotoNextPage,
   gotoPreviousPage
 }: PaginationProps): JSX.Element => {
   const {themeColor} = useContext(ThemeContext)
-  const {navbarColor, theme} = themeColor
+  const {backgroundColor, theme} = themeColor
 
   return (
-    <PaginationContainer style={{backgroundColor: navbarColor}}>
+    <PaginationContainer style={{backgroundColor: backgroundColor}}>
       {gotoPreviousPage && (
         <ArrowContainer 
           onClick={() => gotoPreviousPage()}>

@@ -19,4 +19,6 @@ export interface PokemonDetails {
 
 export interface PokemonCardProps {
   pokemonData: Pokemon;
+  openPokemonModal: Function;
+  setPokemonModalData: Function;
 }

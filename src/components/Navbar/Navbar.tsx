@@ -7,14 +7,14 @@ import ThemeContext from '../../context/themeContext'
 
 export const Navbar = () => {
   const {switchThemeColor, themeColor} = useContext(ThemeContext)
-  const {navbarColor, theme} = themeColor
+  const {backgroundColor, theme} = themeColor
 
   const handleChange = () => {
     switchThemeColor()
   }
 
   return (
-    <NavbarContainer style={{backgroundColor: navbarColor}}>
+    <NavbarContainer style={{backgroundColor: backgroundColor}}>
       <LogoContainer>
         <Logo src={logo}></Logo>
       </LogoContainer>

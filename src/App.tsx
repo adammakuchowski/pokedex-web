@@ -18,8 +18,8 @@ function App(): JSX.Element {
 
   const [themeColor, setThemeColor] = useState<ThemeColor>({
       theme: true,
-      navbarColor: '#FF5858',
-      backgroundColor: '#fbfbfb'
+      backgroundColor: '#FF5858',
+      pokedexBackgroundColor: '#fbfbfb'
   })
 
   const getPokemonData = async (): Promise<Function> => {
@@ -61,13 +61,13 @@ function App(): JSX.Element {
     return theme ? 
       setThemeColor({
         theme: false,
-        navbarColor: '#202020',
-        backgroundColor: '#191919'
+        backgroundColor: '#202020',
+        pokedexBackgroundColor: '#191919'
       }) :
       setThemeColor({
         theme: true,
-        navbarColor: '#FF5858',
-        backgroundColor: '#fbfbfb'
+        backgroundColor: '#FF5858',
+        pokedexBackgroundColor: '#fbfbfb'
       }) 
   }
 
