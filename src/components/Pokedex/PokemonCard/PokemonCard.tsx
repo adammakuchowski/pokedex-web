@@ -2,7 +2,6 @@ import {useEffect, useState} from 'react'
 import axios, {Canceler} from 'axios'
 import {PokemonCardProps, PokemonDetails} from './types'
 import {
-  LoadingSpinnerWrapper,
   PokemonCardBody,
   PokemonCardContainer,
   PokemonCardHeader,
@@ -12,6 +11,7 @@ import {
   PokemonSprite
 } from './PokemonCardStyled'
 import {setPokemonCardColor} from './utils'
+import {LoadingSpinnerWrapper} from '../PokedexStyled'
 import {LoadingSpinner} from '../../UI/LoadingSpinner/LoadingSpinner'
 
 export const PokemonCard = ({
@@ -54,7 +54,7 @@ export const PokemonCard = ({
 
   const openModal = () => {
     openPokemonModal(true)
-    setPokemonModalData(pokemonDetails)
+    setPokemonModalData({...pokemonDetails, modalBackgroundColor: cardColor})
   }
 
 

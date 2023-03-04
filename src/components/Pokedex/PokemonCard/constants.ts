@@ -20,6 +20,3 @@ export enum PokemonTypes {
   Unknown = 'unknown',
   Shadow = 'shadow',
 }
-
-
-

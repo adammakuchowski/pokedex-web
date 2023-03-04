@@ -1,8 +1,17 @@
 import {Pokemon} from '../../../types/types';
 
-export interface PokemonTypes {
+export interface PokemonType {
   slot: number;
   type: {
+    name: string;
+    url: string;
+  }
+}
+
+export interface PokemonStat {
+  base_stat: number;
+  effort: number;
+  stat: {
     name: string;
     url: string;
   }
@@ -14,7 +23,7 @@ export interface PokemonDetails {
   sprites: {
     front_default: any;
   }
-  types: PokemonTypes[];
+  types: PokemonType[];
 }
 
 export interface PokemonCardProps {

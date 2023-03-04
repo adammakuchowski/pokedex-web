@@ -28,5 +28,7 @@ export const ThemeContainer = styled.div`
   display: flex;
   justify-content: end;
   align-items: center;
-  margin: 0 60px;
+  position: relative;
+  right: 20px;
+  /* margin: 0 60px; */
 `
