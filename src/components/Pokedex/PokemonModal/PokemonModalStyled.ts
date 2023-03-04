@@ -15,6 +15,7 @@ export const PokemonModalWrapper = styled.div`
   background-color: #fbfbfb;
 
   border-radius: 15px;
+  min-width: 300px;
 `
 
 export const PokemonModalOverlay = styled.div`
@@ -32,7 +33,9 @@ export const CloseButtonContainer = styled.div`
   justify-content: end;
   align-items: center;
 
-  padding: 20px;
+  position: relative;
+  right: 10px;
+  top: 10px;
 `
 
 export const CloseButtonWrapper = styled.div`
@@ -42,19 +45,65 @@ export const CloseButtonWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: all 0.2s ease-in-out;
+
+  :hover{
+    transform: scale(1.1)
+  }
 `
 
 export const PokemonSpriteContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  flex-direction: column;
+`
+
+export const PokemonName = styled.div`
+  font-size: 25px;
+  margin: 10px 0px;
 `
 
 export const PokemonSprite = styled.img`
   width: 50%;
   border-radius: 50%;
+
+  background-color: #4444;
 `
 
 export const PokemonStatisticsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`
 
+export const PokemonTypeContainer = styled.div`
+  background-color: #5555;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  gap: 30px;
+  margin: 20px 0px;
+`
+
+export const PokemonStatisticsWrapper = styled.div`
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+export const PokemonStatisticsBox = styled.div`
+  background-color: #1235;
+  min-width: 250px;
+  border-radius: 10px;
+  width: 80%;
+
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
 `

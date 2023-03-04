@@ -9,3 +9,6 @@ export const PokedexContainer = styled.div`
 
   justify-content: center;
 `
+export const LoadingSpinnerWrapper = styled.div`
+  width: 100%;
+`

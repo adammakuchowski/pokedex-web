@@ -11,8 +11,6 @@ export const PokemonCardContainer = styled.div`
   height: 250px;
   margin: 20px;
   border-radius: 5% 15%;
-
-  font-family: 'Anton', sans-serif;
   color: black;
 
   -webkit-box-shadow: 8px 8px 24px -5px rgba(66, 68, 90, 1);
@@ -80,8 +78,4 @@ export const PokemonInfo = styled.div`
 
   border-radius: 20%;
   padding: 20px;
-`
-
-export const LoadingSpinnerWrapper = styled.div`
-  width: 100%;
 `
