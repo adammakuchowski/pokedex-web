@@ -30,5 +30,4 @@ export const ThemeContainer = styled.div`
   align-items: center;
   position: relative;
   right: 20px;
-  /* margin: 0 60px; */
 `
