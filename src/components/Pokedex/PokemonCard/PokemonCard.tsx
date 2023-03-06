@@ -34,7 +34,9 @@ export const PokemonCard = ({
       cancelToken: new axios.CancelToken(c => cancel = c)
     }).then(res => {
       setPokemonDetails(res.data)
-
+    }).catch(err => {
+      console.error('Problem while fetching single pokemon data: ', err)
+    }).finally(() => {
       setLoadingData(false)
     })
 

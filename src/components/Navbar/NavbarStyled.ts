@@ -16,6 +16,7 @@ export const LogoContainer = styled.div`
   max-width: 250px;
   align-self: center;
   min-width: 200px;
+  cursor: pointer;
 `
 
 export const Logo = styled.img`

@@ -7,10 +7,12 @@ import {Navbar} from './components/Navbar/Navbar'
 import ThemeContext from './context/themeContext'
 import {LoadingSpinner} from './components/UI/LoadingSpinner/LoadingSpinner'
 
+const DEFAULT_POKEMON_DATA_URL = 'https://pokeapi.co/api/v2/pokemon'
+
 function App(): JSX.Element {
   const [pokemonData, setPokemonData] = useState<PokemonData>()
 
-  const [currentPageUrl, setCurrentPageUrl] = useState<string>('https://pokeapi.co/api/v2/pokemon')
+  const [currentPageUrl, setCurrentPageUrl] = useState<string>(DEFAULT_POKEMON_DATA_URL)
   const [nextPageUrl, setNextPageUrl] = useState<string>()
   const [previousPageUrl, setPreviousPageUrl] = useState<string>()
 
@@ -32,7 +34,9 @@ function App(): JSX.Element {
       setPokemonData(res.data)
       setNextPageUrl(res.data.next)
       setPreviousPageUrl(res.data.previous)
-
+    }).catch(err => {
+      console.error('Problem while fetching pokedex data: ', err)
+    }).finally(() => {
       setLoadingData(false)
     })
 
@@ -81,7 +85,7 @@ function App(): JSX.Element {
           themeColor: themeColor,
           switchThemeColor,
         }}>
-          <Navbar/>
+          <Navbar setCurrentPageUrl={setCurrentPageUrl} defaultPokemonDataUrl={DEFAULT_POKEMON_DATA_URL}/>
           <Pokedex pokemons={pokemonData} />
           <Pagination
             gotoNextPage={nextPageUrl ? gotoNextPage : null}
