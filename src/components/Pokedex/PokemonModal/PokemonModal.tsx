@@ -34,19 +34,16 @@ export const PokemonModal = ({
   return (
     <PokemonModalContainer>
       <PokemonModalOverlay/>
-
       <PokemonModalWrapper style={{backgroundColor: modalBackgroundColor}}>
         <CloseButtonContainer>
           <CloseButtonWrapper onClick={closeModal}>
             <IoIosCloseCircle/>
           </CloseButtonWrapper>
         </CloseButtonContainer>
-
         <PokemonSpriteContainer>
           <PokemonName>{pokemonModalData.name}</PokemonName>
           <PokemonSprite src={pokemonModalData.sprites.front_default} />
         </PokemonSpriteContainer>
-
         <PokemonStatisticsContainer>
           {pokemonModalData.types && (
               <PokemonTypeContainer>
@@ -55,8 +52,6 @@ export const PokemonModal = ({
                 ))}
             </PokemonTypeContainer>
           )}
-
-
           <PokemonStatisticsWrapper>
             <PokemonStatisticsBox>
               {pokemonModalData.stats && pokemonModalData.stats.map(stat => (
@@ -65,8 +60,6 @@ export const PokemonModal = ({
               }
             </PokemonStatisticsBox>
           </PokemonStatisticsWrapper>
-
-
         </PokemonStatisticsContainer>
       </PokemonModalWrapper>
     </PokemonModalContainer>

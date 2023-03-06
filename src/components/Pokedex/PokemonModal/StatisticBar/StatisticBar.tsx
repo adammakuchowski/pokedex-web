@@ -33,16 +33,12 @@ export const StatisticBar = ({
           {stat.name}:
         </StatisticName>
       </StatisticNameWrapper>
-
-
       <Box sx={{width: '60%'}}>
         <LinearProgress variant="determinate" color={barColor} value={base_stat > 100 ? 100 : base_stat} style={{height: 17}} />
       </Box>
-
       <StatisticValue>
         {base_stat}
       </StatisticValue>
-
     </StatisticBarContainer>
   )
 }

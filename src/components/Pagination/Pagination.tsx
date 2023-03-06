@@ -8,7 +8,6 @@ interface PaginationProps {
   gotoPreviousPage: Function | null,
 }
 
-
 export const Pagination = ({
   gotoNextPage,
   gotoPreviousPage
@@ -24,7 +23,6 @@ export const Pagination = ({
             <AiOutlineArrowLeft style={{color: 'white'}}/>
         </ArrowContainer>
       )}
-
       {gotoNextPage && (
         <ArrowContainer 
           onClick={() => gotoNextPage()}>

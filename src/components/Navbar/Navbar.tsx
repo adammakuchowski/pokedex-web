@@ -1,11 +1,19 @@
 import {useContext} from 'react'
-import { CgSun, CgMoon } from 'react-icons/cg'
+import {CgSun, CgMoon} from 'react-icons/cg'
 import Switch from '@mui/material/Switch'
 import {Logo, LogoContainer, NavbarContainer, ThemeContainer} from './NavbarStyled'
 import logo from '../../assets/navbar/logo.png'
 import ThemeContext from '../../context/themeContext'
 
-export const Navbar = () => {
+interface NavbarProps {
+  setCurrentPageUrl: Function,
+  defaultPokemonDataUrl: string,
+}
+
+export const Navbar = ({
+  setCurrentPageUrl,
+  defaultPokemonDataUrl,
+}: NavbarProps): JSX.Element => {
   const {switchThemeColor, themeColor} = useContext(ThemeContext)
   const {backgroundColor, theme} = themeColor
 
@@ -13,21 +21,24 @@ export const Navbar = () => {
     switchThemeColor()
   }
 
+  const setDefaultPokemonUrl = () => {
+    setCurrentPageUrl(defaultPokemonDataUrl)
+  }
+
   return (
     <NavbarContainer style={{backgroundColor: backgroundColor}}>
-      <LogoContainer>
+      <LogoContainer onClick={setDefaultPokemonUrl}>
         <Logo src={logo}></Logo>
       </LogoContainer>
-
       <ThemeContainer>
-        <CgSun style={{color: theme ? 'white' : ''}}/>
+        <CgSun style={{color: theme ? 'white' : ''}} />
         <Switch
           checked={!theme}
           onChange={handleChange}
-          inputProps={{ 'aria-label': 'controlled'}}
+          inputProps={{'aria-label': 'controlled'}}
           color='default'
         />
-        <CgMoon style={{color: theme ? '' : 'white'}}/>
+        <CgMoon style={{color: theme ? '' : 'white'}} />
       </ThemeContainer>
     </NavbarContainer>
   )
