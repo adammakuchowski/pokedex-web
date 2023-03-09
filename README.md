@@ -50,13 +50,16 @@ npm start
 The project was created entirely independently. Used as a source of knowledge
 official documentations and the Internet.
 
-### Screens
+## Screens
+
+### Light mode
 
 ![pokedex_1](https://user-images.githubusercontent.com/94242778/224133943-d33dad31-9518-462e-b104-87be516e1799.PNG)
 
-![pokedex_2](https://user-images.githubusercontent.com/94242778/224133965-0020a6ea-9c38-4205-9d09-0dd7df202287.PNG)
+![pokedex_2](https://user-images.githubusercontent.com/94242778/224134682-5a924c62-e23f-4c4a-8052-91d4ab0bf79d.PNG)
 
-![pokedex_3](https://user-images.githubusercontent.com/94242778/224133978-d44cc179-04a3-4d5b-ab07-1e9b32cc3c58.PNG)
+### Dark mode 
 
-![pokedex_4](https://user-images.githubusercontent.com/94242778/224133989-21ca4913-2b5e-451a-becb-b2f4e1b928c4.PNG)
+![pokedex_3](https://user-images.githubusercontent.com/94242778/224134698-13afd565-63e6-4dbd-a8ee-14cea04184f3.PNG)
 
+![pokedex_4](https://user-images.githubusercontent.com/94242778/224134712-6d73ffa1-7857-40c6-9ccb-faa5b609297f.PNG)
