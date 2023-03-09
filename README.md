@@ -37,6 +37,10 @@ npm install
 npm start
 ```
 
+## Link
+
+[PokéDEX](https://pokedex-wiki.netlify.app/)
+
 ## Author
 
 [Adam Makuchowski](https://www.linkedin.com/in/adam-makuchowski-35753a209/)
@@ -45,3 +49,14 @@ npm start
 
 The project was created entirely independently. Used as a source of knowledge
 official documentations and the Internet.
+
+### Screens
+
+![pokedex_1](https://user-images.githubusercontent.com/94242778/224133943-d33dad31-9518-462e-b104-87be516e1799.PNG)
+
+![pokedex_2](https://user-images.githubusercontent.com/94242778/224133965-0020a6ea-9c38-4205-9d09-0dd7df202287.PNG)
+
+![pokedex_3](https://user-images.githubusercontent.com/94242778/224133978-d44cc179-04a3-4d5b-ab07-1e9b32cc3c58.PNG)
+
+![pokedex_4](https://user-images.githubusercontent.com/94242778/224133989-21ca4913-2b5e-451a-becb-b2f4e1b928c4.PNG)
+
