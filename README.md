@@ -4,7 +4,7 @@ PokéDEX is a project that presents all pokemons in simple and clear UI design.
 
 ## Description
 
-The PokéDEX project was created to learn and grow as a developer. The application written in React presents all Pokemon, their detailed statistics and types. Pokemon data is fetched from public API: https://pokeapi.co/
+The PokéDEX project was created to learn and grow as a WEB Developer. The application written in React presents all Pokemon, their detailed statistics and types. Pokemon data is fetched from public API: https://pokeapi.co/
 
 ### Used technologies
 
